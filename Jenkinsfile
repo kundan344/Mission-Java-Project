@@ -64,7 +64,6 @@ pipeline {
         
         stage('deloy') {
             steps {
-                sh "docker kill mission-app"
                 sh "docker run -d --name misson-app -p 8082:8080 kundankumar344/mission:latest"
                 sh "docker ps"
             }
